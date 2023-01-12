@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //factory function
+        let address1=createAddress("lz","suzhou","215000");
+        console.log(address1);
+
+        //constructor function调用时使用new关键字
+        let address2=new Address("bjt","suzhou","215000");
+        console.log(address2);
+
+        function createAddress(street,city,zipCode){
+            return{
+                //在JavaScript中，street:street,可以用一个street来简写。
+                street,
+                city,
+                zipCode
+            };
+        }
+
+        //constructor 构造函数是个比较特殊的函数，
+        function Address(street,city,zipCode){
+            this.street=street;
+            this.city=city;
+            this.zipCode=zipCode;
+        }
+
+    </script>
+</body>
+</html>

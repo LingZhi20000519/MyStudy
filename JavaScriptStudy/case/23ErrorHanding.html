@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //reduce用来遍历数组。
+        function countOccurrencesBatter(array,searchElement){
+            return array.reduce(
+                function getOccurrence(total,currentValue){
+                    if(typeof currentValue !== "number")
+                        throw new Error('Value is not a number');
+
+                    if(currentValue===searchElement)
+                        total++;
+                    return total;
+                },
+                0
+            )
+        }
+
+        try{
+            const numbers=[1,2,3,"a",1];
+            const count =countOccurrencesBatter(numbers,5);
+            console.log(count);
+        }catch(e){
+            alert(e);
+        }
+    </script>
+</body>
+</html>

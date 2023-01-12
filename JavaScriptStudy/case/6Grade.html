@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const marks=[80,80,50];
+        console.log(calculateGrade(marks));
+        function calculateGrade(marks){
+            let sum =0;
+            let count=0
+            for(let i of marks){
+                sum=sum+i;
+                count++;
+            } 
+            const grade=sum/count;
+            if(grade<60)
+                return 'F';
+            else if(grade<70)
+                return 'D';
+            else if(grade<80)
+                return 'C';
+            else if(grade<90)
+                return 'B';
+            else
+                return 'A';
+        }
+        
+        function calculateGradeBatter(marks){
+            const average=calculateAverage(marks);
+            if(average<60)return 'F';
+            if(average<70)return 'D';
+            if(average<80)return 'C';
+            if(average<90)return 'B';
+            return 'A';
+        }
+
+        function calculateAverage(array){
+            let sum=0;
+            for(let value of array)
+                sum+=value;
+            return sum/array.length;
+        }
+
+   </script>
+</body>
+</html>

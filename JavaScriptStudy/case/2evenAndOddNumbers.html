@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        showNumberBetter(10);
+        function showNumber(Limit){
+            const EVEN='EVEN';
+            const ODD='ODD';
+            for(let i=0;i<=Limit;i++){
+                let isOdd=i%2;
+                if(isOdd)
+                    console.log(i+ODD);
+                else
+                    console.log(i+EVEN);
+            }
+        }
+        function showNumberBetter(Limit){
+            for(let i=0;i<=Limit;i++){
+                const message=(i%2===0)?'EVEN':'ODD';
+                console.log(i,message);
+            }
+
+        }
+    </script>
+</body>
+</html>

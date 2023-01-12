@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>属性选择器</title>
+        <style>
+            [id="one"]{
+                text-align: center;
+            }
+            [id^="tw"]{
+                color: #00ff00;
+            }
+            [id$="ee"]{
+                color: #ff0000;
+            }
+            [id*="ou"]{
+                color: #0000ff;
+            }
+            /*
+            感觉
+            id选择器 类选择器 有点类似属性选择器的子集，毕竟id，class也是属性
+
+            #one等于 [id="one"]
+            .one等于[class="one"]
+            */
+        </style>
+    </head>
+    <body>
+        <div id="one">
+            <h1>[attr="val"] 匹配属性的值等于指定值的所有元素</h1>
+        </div>
+
+         <div id="two">
+            <h1>[attr^="val"] 匹配属性的值以指定值开头的所有元素</h1>
+        </div>
+
+        <div id="three">
+            <h1>[attr$="val"] 匹配属性的值以指定值结束的所有元素</h1>
+        </div>
+
+        <div id="four">
+            <h1>[attr*="val"] 匹配属性的值中包含指定值的所有元素</h1>
+        </div>
+
+    
+
+
+
+
+
+
+    </body>
+</html>

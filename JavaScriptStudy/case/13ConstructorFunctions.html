@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let blogPost={
+            title:"a",
+            body:"b",
+            author:"c",
+            view:10,
+            comments:[
+                {author:"a",body:"b"},
+                {author:"c",body:"d"}
+            ],
+            isLive:true
+        }
+
+        //写一个稍微复杂点的构造函数
+        function BlogPost(title,body,author){
+            this.title=title,
+            this.body=body,
+            this.author=author,
+            this.view=0,
+            this.comments=[],
+            this.isLive=false
+
+        }
+
+        let post1=new BlogPost('a','b','c')
+        console.log(post1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        checkSpeed(75);0
+        function checkSpeed(speed){ 
+        let Point=Math.floor((speed-70)/5);
+        console.log(Point);
+        if(Point<=1)
+            console.log("ok");
+        else if(Point<=12)
+            console.log("Point:"+Point);
+         else
+            console.log("suspended");
+        }
+    </script>
+</body>
+</html>

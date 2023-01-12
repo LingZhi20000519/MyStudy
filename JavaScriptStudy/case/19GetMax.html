@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers=[1,2,3,4,5,3,6,2,4]
+
+        const max=getMaxReduceBetter(numbers);
+
+        console.log(max);
+
+        function getMax(array){
+            let max=array[0];
+
+            for(let element of array)
+                if (element>max)
+                    max=element
+
+            return max;
+        }
+
+        function getMaxReduce(array){
+            if(array.length===0) return undefined;
+
+            return array.reduce(
+                function(accumulator,currentValue){
+                    if(currentValue>accumulator)
+                        return currentValue;
+                    return accumulator;
+                }
+            )
+        }
+
+        function getMaxReduceBetter(array){
+            if(array.length===0) return undefined;
+
+            return array.reduce((a,b)=>(a>b)?a:b);
+        }
+    </script>
+</body>
+</html>

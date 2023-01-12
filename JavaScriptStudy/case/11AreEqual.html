@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let address1=new Address("A","B","C");
+        let address2=new Address("A","B","C");
+        let address3=address1;
+        
+        function Address(street,city,zipCode){
+            this.street=street,
+            this.city=city,
+            this.zipCode=zipCode
+        }
+        
+        //判断对象的值是否相等
+        function areEqual(address1,address2){
+            return address1.street===address2.street &&
+                address1.city===address2.city &&
+                address1.zipCode==address2.zipCode;
+        }
+
+        //判断两个对象是否相同
+        function areSame(address1,address2){
+            return address1===address2;
+        }
+
+        //地址1和地址2每个值都相同
+        console.log(areEqual(address1,address2));
+        //地址1和地址2是两个不同的对象
+        console.log(areSame(address1,address2));
+        //地址1和地址3指向的是同一个对象
+        console.log(areSame(address1,address3))
+    </script>
+</body>
+</html>

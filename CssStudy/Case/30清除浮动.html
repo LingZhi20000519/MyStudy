@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width: 600px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #000000;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .item{
+                width: 60px;
+                height: 60px;
+                float: left;
+                background-color: aqua;
+            }
+            /*使用设置行高清除浮动*/
+            #box1{
+                height: 200px;
+            }
+            #one{
+                background-color: #000000;
+            }
+            #two{
+                background-color: #0000ff;
+            }
+            #three{
+                background-color: #00ff00;
+            }
+            /*使用clear属性清除浮动*/
+            .itemClear{
+                clear: both;
+            }
+            /*使用overflow:hidden行高清除浮动*/
+            ul li{
+                width: 60px;
+                height: 60px;
+                float: left;
+                background-color: aqua;
+            }
+            ul{
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id="box1">
+            <h1>使用设置行高清除浮动</h1>
+            <div class="item" id="one"></div>
+            <div class="item" id="two"></div>
+            <div class="item" id="three"></div>
+        </div>
+
+        <div class="box">
+            <h1>使用clear属性清除浮动</h1>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="itemClear"></div>     
+        </div>
+
+
+        <div class="box">
+            <h1>使用overflow:hidden行高清除浮动</h1>
+            <ul>
+                <li>aaa</li>
+                <li>aaa</li>
+                <li>aaa</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            p{
+                /*文本阴影：水平阴影 垂直阴影 模糊距离 阴影颜色*/
+                text-shadow: 3px 3px 3px #999999;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                border: 2px #000000 solid;
+                /*盒子阴影：水平方向阴影、垂直方向阴影、模糊距离、阴影尺寸、阴影颜色、内/外阴影。*/
+                box-shadow: 30px 3px 3px 3px #999999;
+            }
+            img{
+                /*图片阴影和盒子阴影一样*/
+                box-shadow: 30px 3px 3px 3px #999999;
+            }
+        </style>
+    </head>
+    <body>
+        <p>文本阴影</p>
+        <hr>
+        <div class="box"></div>
+        <img src="picture/test.jpg" alt="测试"/>
+    </body>
+</html>

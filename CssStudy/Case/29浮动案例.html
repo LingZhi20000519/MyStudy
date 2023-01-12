@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>网站导航栏</title>
+        <style>
+            /*body标签有默认的margin数值*/
+            *{
+                /*清除块级元素的内边距和外边距*/
+                margin: 0px;
+                padding: 0px;
+            }
+            .nav ul{
+                list-style: none;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #000000;
+                width: 600px;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: aqua;
+            }
+            .nav ul li{
+                float: left;
+                width: 100px;
+                margin-top: 15px;
+                margin-bottom: auto;
+            }
+            a:link,a:visited{
+                color: #ffffff;
+                text-decoration: none;
+            }
+            a:hover{
+                color: #000000;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="#">导航内容</a></li>
+                <li><a href="#">导航内容</a></li>
+                <li><a href="#">导航内容</a></li>
+                <li><a href="#">导航内容</a></li>
+                <li><a href="#">导航内容</a></li>
+                <li><a href="#">导航内容</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

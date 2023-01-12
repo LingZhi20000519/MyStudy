@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers=[1,2,3,4];
+
+        const output =move(numbers,1,0)
+
+        console.log(output);
+
+        //需求理解错了，offset应该是移动的距离而不移动到哪个位置
+        function move(array,index,offset){
+            const output=[...array];
+            
+            if( offset> output.length || offset<0){
+                console.error("Invalid offset");
+                return ;
+            }
+
+            
+
+            if(index > offset)
+                return move(array,offset,index);
+            
+            
+            let number=output[index];    
+            for(let i = index;i<=offset;i++)
+                output[i]=output[i+1];
+            output[offset]=number;
+
+            return output;
+        }
+
+        function moveBetter(array,index,offset){
+            const position=index+offset;
+            if(position>=array.length || position<0){
+                console.error("Invalid offset");
+                return;
+            }
+
+            const output=[...array];
+            const element=output.splice(index,1)[0];
+            output.splice(position,0,element);
+            return output;
+        }
+    </script>
+</body>
+</html>

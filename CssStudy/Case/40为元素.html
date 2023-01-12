@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            /*伪元素选中第一个字*/
+            p::first-letter{
+                font-size: 80px;
+                color: aquamarine;
+            }
+            /*伪元素选择器选中第一行*/
+            p::first-line{
+                font-size:40px;
+                color: #ff00ff;
+            }
+            /*伪元素在前面插入*/
+            p::before{
+                content: "在前面插入";
+            }
+            /*伪元素在后面插入*/
+            p::after{
+                content: "在后面插入";
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <br>
+            内容的主体<br>
+            内容的主体<br>
+            内容的主体<br>
+        </p>
+    </body>
+</html>

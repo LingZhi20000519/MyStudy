@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                border-color: #000000;
+                border-style: solid;
+                border-width: 1px;
+            }
+            .item{
+                width: 200px;
+                height: 200px
+            }
+            #div1{
+                background-color: #000000;
+                float: right;
+            }
+            #div2{
+                background-color: #0000ff;
+            }
+            #div3{
+                background-color: #00ff00;
+                float: right;
+                /*也可以浮动出框外*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1>浮动在普通元素上一级</h1>
+        <div class="box">
+            <div class="item" id="div1"></div>
+            <div class="item" id="div2"></div>
+            <div class="item" id="div3"></div>
+        </div>
+        <h1>行内元素加上浮动变成块级元素</h1>
+       aa <span>aa</span>aa
+       <br>
+       aa <span style="float: right;height: 100px;">zzzzz</span>aa
+    </body>
+</html>

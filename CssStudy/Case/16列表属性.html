@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul li{
+                list-style-position: inside;
+                border: 1pt red solid;              
+            }
+            #one ul li{
+                list-style-type: none;
+            }
+            #two ul li{
+                list-style-position: outside;           
+            }
+            #three ul li{
+                list-style-image: url(picture/test.jpg);
+            }
+            #four ul li{
+                list-style: none outside url(picture/test.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="one">
+            <h1>list-style-type属性 </h1>
+            <p>none (将列表前面的项目符号去掉),disc (实心圆),square (实心小方块),circle (空心圆)，设置列表前项目符号的类型。</p>
+            <ul>
+                <li>第一行</li>
+                <li>第二行</li>
+                <li>第三行</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id="two">
+            <h1>list-style-position设置列表项标记的放置位置。</h1>
+            <p>inside (在里面), outside (在外面)</p>
+            <ul>
+                <li>第一行</li>
+                <li>第二行</li>
+                <li>第三行</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id="three">
+            <h1>list-style-image将图象设置为列表项标记。</h1>
+            <p>url (图像路径)</p>
+            <ul>
+                <li>第一行</li>
+                <li>第二行</li>
+                <li>第三行</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id="four">
+            <h1>list-style在一个声明中设置所有列表属性</h1>
+            <p>square inside url(arrow.gif)</p>
+            <ul>
+                <li>第一行</li>
+                <li>第二行</li>
+                <li>第三行</li>
+            </ul>
+        </div>
+    </body>
+</html>

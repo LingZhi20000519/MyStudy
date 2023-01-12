@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                color: blue;
+            }
+            #one{
+                text-align: left;
+                color: #00ff00;
+            }
+            #two{
+               border-color: #ff00ff;
+               border-style: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>继承性</h1>
+        <p>1 外层元素身上的样式会被内层元素所继承</p>
+        <p id="one">2如果内层元素与外层元素身上的演示相同时，外层元素的样式会被内层元素所覆盖</p>
+        <div id="two">
+            <p>不是所有样式能被继承，只有文本与字体样式属性能被继承，其他样式属性不能被继承</p>
+        </div>      
+    </body>
+</html>
